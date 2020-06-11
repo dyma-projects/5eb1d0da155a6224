@@ -1,8 +1,11 @@
-<br/>
-<br/>
-<br/>
-<h3>Exercice 1 : mise en place de Output et Input </h3>
-<app-exercice1-enfant></app-exercice1-enfant>
-<br/>
-<span> compteur : {{ result }}</span>
-<hr>
+<div class="row mt-5">
+    <input type=" text" class="form-control col-9" [(ngModel)]="user">
+  <button class="btn btn-primary col-3" (click)="users.push(user)">Ajouter</button>
+</div>
+
+
+<div class="row mt-2">
+  <ul class="list-group list-group-flush col-8 mx-auto">
+    <li *ngFor=" let user of users" [user]="u" (click)="deleteUser(user)">{{user}}</li>
+  </ul>
+</div>
