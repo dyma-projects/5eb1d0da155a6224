@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class Exercice1Component implements OnInit {
   public compteur: number = 0;
-  public result: number = this.compteur;
+  public result: number = 0;
 
 
   constructor() {}
@@ -15,6 +15,7 @@ export class Exercice1Component implements OnInit {
   ngOnInit() {
   }
   public incrCompteur(event: any) : void{
-    this.compteur =  event.value;
+    this.result = event.value;
+    this.compteur = event.value;
   }
 }

@@ -6,17 +6,21 @@ import { Component, OnInit, EventEmitter, Input, Output } from "@angular/core";
   styleUrls: ["./exercice1-enfant.component.css"],
 })
 export class Exercice1EnfantComponent implements OnInit {
-  @Input() public compteur: number = 0;
+  @Input()
+  public compteurEnfant : number = 0;
 
-  @Output("incrementation") public even = new EventEmitter();
+  @Output("incrementation")
+  public event = new EventEmitter();
+
+  public newVal: number = 0;
 
   constructor() {}
 
   ngOnInit() {}
   public compteurIncr(val: number): void {
-    this.compteur += val;
-    this.even.emit({
-      value: this.compteur,
+    this.newVal += val;
+    this.event.emit({
+      value: this.newVal,
     });
   }
 }
