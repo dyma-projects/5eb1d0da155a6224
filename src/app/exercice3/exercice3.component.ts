@@ -7,15 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Exercice3Component implements OnInit {
 
-  public status: Boolean = true;
-
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
-  switchStatus(): void {
-    this.status = !this.status;
+  ngOnInit() {
   }
 
 }
